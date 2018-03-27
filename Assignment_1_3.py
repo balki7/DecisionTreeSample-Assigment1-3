@@ -6,11 +6,11 @@ data = [[True, True, True],
         [False, True, False],
         [False, False, True],
         [False, False, False]]
-result = [False, True, True, False, True, True, False, False]
+result = ['No', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'No', 'No']
 print(data)
 print(result)
 from sklearn.tree import DecisionTreeClassifier
-clf = DecisionTreeClassifier(max_leaf_nodes=5)
+clf = DecisionTreeClassifier()
 clf = clf.fit(data, result)
 from sklearn import tree
 with open("tree_representation.dot","w") as f:
