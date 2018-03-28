@@ -10,7 +10,7 @@ result = ['No', 'Yes', 'Yes', 'No', 'Yes', 'Yes', 'No', 'No']
 print(data)
 print(result)
 from sklearn.tree import DecisionTreeClassifier
-clf = DecisionTreeClassifier()
+clf = DecisionTreeClassifier(criterion='entropy')
 clf = clf.fit(data, result)
 from sklearn import tree
 with open("tree_representation.dot","w") as f:
